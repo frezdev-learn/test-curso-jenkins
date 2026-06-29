@@ -24,13 +24,19 @@
 
 4. **Creación de Proyectos Básicos**
 
-- ¿ Qué es un "Job" en Jenkins?
+- ¿Qué es un "Job" en Jenkins?
 - Configuración de un proyecto freestyle.
 - Conexión con un repositorio Git básico.
 - Ejecución de un script simple (ejemplo: "Hello World").
 
 5. **Gestión de Builds**
 
-- ¿ Qué es un build y cómo funciona?
+- ¿Qué es un build y cómo funciona?
 - Visualización del historial de builds.
 - Configuración de disparadores (triggers) manuales y automáticos (polling SCM).
+
+6. **Introducción a Plugins**
+
+- ¿Qué son los plugins y cómo instalarlos?
+- Plugins esenciales: Git Plugin, Maven Integration, Email Extension.
+- Actualización y gestión de plugins.

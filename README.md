@@ -34,3 +34,5 @@ docker run -d --name jenkins
 - **Pipeline** -> Usado para los flujos de integración y despliegue continuo (CI/CD)
 - **Multibranch Pipeline** -> Ideal para proyectos con varias ramas en git
 - **Maven Project** -> Usado para proyecto Java con Maven
+
+### Build
