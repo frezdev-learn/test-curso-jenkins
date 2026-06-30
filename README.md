@@ -70,3 +70,21 @@ Jenkins permite ejecutar Builds automaticamente con diferentes métodos.
 - **Webhook:** Dispara el Job cuando hay algin cambio en el repositorio de GitHub, GitLab u otros.
 - **Cron Programado:** Ejecuta el Job en intervalos de tiempo especificos.
 - **Disparo por otro Job:** Un Job puede ejecutar otro Job cuando termine.
+
+---
+
+La opción mas comun para utilizar con GitHub, es mediaante un webhook.
+Esto se debe configurar en el repositorio de donde obtenemos el código fuente.
+
+- Nos vamos a las configuraciones del repositorio
+- Seleccionas la opción **Webhooks** y click en el botón **Add webhook** y agregas la url de tu instancia de Jenkins, en el campo **Payload URL**
+  - Si estas usando Jenkins, te recomiendo utilizar una herramienta como `ngrok` para generar una url accesible para GitHub.
+  - La url debe terminar con `/github-webhook`
+- En el campo **Content type** seleccionas `application/json`.
+- Por último, las opciones de **Which events would you like to trigger this webhook?**, seleccionas `Just the push event.`
+- Finalmente das click en el botón **Add webhook** de nuevo.
+
+Tal cual se muestra en la siguiente imagen
+<img width="1115" height="641" alt="image" src="https://github.com/user-attachments/assets/fba003f9-5bc8-469f-8fb3-bebc8beb05ea" />
+
+
