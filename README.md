@@ -85,6 +85,7 @@ Esto se debe configurar en el repositorio de donde obtenemos el código fuente.
 - Finalmente das click en el botón **Add webhook** de nuevo.
 
 Tal cual se muestra en la siguiente imagen
-<img width="1115" height="641" alt="image" src="https://github.com/user-attachments/assets/fba003f9-5bc8-469f-8fb3-bebc8beb05ea" />
+<img width="1378" height="924" alt="image" src="https://github.com/user-attachments/assets/d878918e-0c57-49e9-86d8-265e3db6a921" />
+
 
 
