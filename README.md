@@ -87,5 +87,5 @@ Esto se debe configurar en el repositorio de donde obtenemos el código fuente.
 Tal cual se muestra en la siguiente imagen
 <img width="1378" height="924" alt="image" src="https://github.com/user-attachments/assets/d878918e-0c57-49e9-86d8-265e3db6a921" />
 
-
+## Plugings
 

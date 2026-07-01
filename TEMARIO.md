@@ -40,3 +40,20 @@
 - ¿Qué son los plugins y cómo instalarlos?
 - Plugins esenciales: Git Plugin, Maven Integration, Email Extension.
 - Actualización y gestión de plugins.
+
+#### Nivel Intermedio: Automatización y Flujos de Trabajo
+
+**Objetivo**: Aprender a integrar Jenkins con herramientas comunes y crear flujos de trabajo más complejos.
+
+### 7. **Configuración Avanzada de Proyectos Freestyle**
+
+- Parámetros en jobs (ejemplo: selección de ramas).
+- Uso de variables de entorno.
+- Ejecución de scripts en Bash, PowerShell o Python.
+- Configuración de notificaciones (email, Slack).
+
+### 8. **Integración con Herramientas de Control de Versiones**
+
+- Conexión con GitHub, GitLab y Bitbucket.
+- Configuración de Webhooks para disparadores automáticos.
+- Manejo de múltiples ramas y pull requests.
