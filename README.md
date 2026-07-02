@@ -140,3 +140,16 @@ Son extenciones que se instalan a Jenkins para agregar nuevas funcionalidades.
 ## Parametros en Jobs
 
 Permiten ingresar valores al momento de ejecutar un build. Es util, por ejemplo, para seleccionar una rama especifica de Git o definir valores antes de una ejecución.s
+
+Para ingresar parametros
+1. Te dirijes a las configuraciones de un Job 
+<img width="372" height="634" alt="image" src="https://github.com/user-attachments/assets/39291555-bad3-42d8-bf64-c2ff23ef3a09" />
+
+---
+2. Marca la casilla **Esta ejecución debe parametrizarse**
+<img width="1264" height="676" alt="image" src="https://github.com/user-attachments/assets/6663c521-9557-4677-92fe-f67b24f40cb0" />
+
+---
+
+3. Forma de utilizarlo:
+<img width="719" height="249" alt="image" src="https://github.com/user-attachments/assets/3daf2e66-2312-4123-a997-2c684ced4e58" />
