@@ -17,6 +17,35 @@ docker run -d --name jenkins
 -v jenkins_home:/var/jenkins_home # Crear volumen
 ```
 
+- **Instalar Jenkins con Docker Compose:**
+
+```yml
+services:
+  jenkins:
+    image: jenkins/jenkins:lts
+    container_name: jenkins
+
+    restart: unless-stopped
+
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+
+    volumes:
+      - jenkins_home:/var/jenkins_home
+
+    environment:
+      - JAVA_OPTS=-Djenkins.install.runSetupWizard=true
+
+volumes:
+  jenkins_home:
+    external: true
+```
+
+```bash
+docker compose up -d
+```
+
 Obten la contraseña de Administrador:
 
 ```bash
@@ -88,3 +117,26 @@ Tal cual se muestra en la siguiente imagen
 <img width="1378" height="924" alt="image" src="https://github.com/user-attachments/assets/d878918e-0c57-49e9-86d8-265e3db6a921" />
 
 ## Plugings
+
+Son extenciones que se instalan a Jenkins para agregar nuevas funcionalidades.
+
+- Podemos instalar plugins para:
+  - Soporte de control de versiones como: Git, SVN, Bitbucket, etc.
+  - Integración con otras herramientas de construcción como: Maven, Gradle, Node.js.
+  - Soporte para notificaciónes via Email ó Slack.
+  - Soporte para contenedores como: Docker y Kubernetes.
+  - Pruebas automatizadas como: JUnit, Selenium, Playwright, etc.
+
+### Pluguins mas requeridos:
+
+- [Git Plugin](https://plugins.jenkins.io/git/): Ofrece operaciones básicas de Git para los proyectos de Jenkins. Permite consultar, descargar, realizar un checkout, crear ramas, listar, fusionar, etiquetar y enviar repositorios.
+
+- [Maven Integration](https://plugins.jenkins.io/maven-plugin/): Sirve para integrar de forma nativa proyectos Maven con Jenkins, facilitando la compilación, pruebas y publicación de artefactos. Fue muy importante en los proyectos Freestyle clásicos, aunque hoy en día su uso ha disminuido debido al auge de los Pipelines.
+
+- [Email Extension Plugin](https://plugins.jenkins.io/email-ext): Se utiliza para enviar notificaciones por correo electrónico mucho más personalizadas y potentes que las que ofrece el plugin básico de correo de Jenkins.
+
+---
+
+## Parametros en Jobs
+
+Permiten ingresar valores al momento de ejecutar un build. Es util, por ejemplo, para seleccionar una rama especifica de Git o definir valores antes de una ejecución.s
