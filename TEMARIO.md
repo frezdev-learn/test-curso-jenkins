@@ -57,3 +57,15 @@
 - Conexión con GitHub, GitLab y Bitbucket.
 - Configuración de Webhooks para disparadores automáticos.
 - Manejo de múltiples ramas y pull requests.
+
+### 9. **Automatización de Pruebas**
+
+- Integración con herramientas de pruebas (JUnit, Selenium, PyTest).
+- Generación de reportes de resultados.
+- Fallos condicionales: Qué hacer si las pruebas fallan.
+
+### 10. **Introducción a Jenkins Pipeline**
+
+- ¿Qué es un Pipeline y por qué usarlo?
+- Diferencia entre Pipeline Declarativo t Scripted.
+- Creación de un archivo `Jenkinsfile`.
