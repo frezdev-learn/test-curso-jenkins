@@ -154,10 +154,11 @@ Para ingresar parametros
 ---
 
 3. Forma de utilizarlo:
-   
+
    <img width="719" height="249" alt="image" src="https://github.com/user-attachments/assets/3daf2e66-2312-4123-a997-2c684ced4e58" />
 
 ## Valiables de entorno
+
 Permiten reutilizar valores dentro de un Job. Jenkins tiene variable de entorno ya establecidas por defecto, tambien permite crear variables de entorno necesarias para el proyecto.
 
 Algunas de las variable de entorno que Jenkins tiene preestablecidad son las siguientes:
