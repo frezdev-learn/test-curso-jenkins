@@ -171,3 +171,61 @@ Algunas de las variable de entorno que Jenkins tiene preestablecidad son las sig
 **Forma de utilizar:**
 
   <img width="724" height="393" alt="image" src="https://github.com/user-attachments/assets/8dd7975a-d6d3-4d52-a315-6de3974eea32" />
+
+## Ejecutar un programa en python desde Jenkins
+
+- Cuando lanzamos un contenedor Docker de la imagen de Jenkins, dicha imagen tiene un sistema operativo muy ligero para evitar que la imagen pese demacioado, por esta razón no tiene Python instalado por defecto,
+  - Docker -> Contenedor(Linux - Jenkins)
+
+- Para instalar Python necesitamos acceder a la linea de comandos del contenedor con el usuario `root`:
+
+```bash
+docker exec -it --user root jenkins /bin/bash
+```
+
+- **Instalar `python3` y `python3.pip`**
+  Una vez dentro de la terminal del contenedor, ejecutamos lo siguiente:
+
+1. Actualizar paquetes:
+
+```bash
+apt-get update
+```
+
+2. Instalar `python`
+
+```bash
+apt-get install python3 python3.pip
+```
+
+## Configuración de notificaciones vía Email:
+
+1. Ir a la opción de **Administrar Jenkins** (⚙️)
+2. Ir a System Configuration -> System
+3. Buscar la opción **System Admin e-mail address**
+
+- Aqui colocarémos el nombre que se mostrará en los correos enviados a los destinatarios
+  <img width="868" height="484" alt="image" src="https://github.com/user-attachments/assets/2d4b9adf-1fb2-4125-8d66-d4aa8f68109b" />
+
+4. Ir a la sección **Notificación por correo electrónico** (normalmente ubicado al final)
+
+- Aquí añadiremos la siguiente configuración:
+  1. En **Servidor de correo saliente (SMTP)** colocaremos el servidor SMTP, para este ejemplo usaremos en de **Gmail**.
+     - `smtp.gmail.com`
+  2. Click en el toggle que dice **Avanzado**
+     - Aquí llenaremos los siguiente campos
+       - Marca la opción **Use SMTP Authentication** (si no está marcada aún)
+         - **Nombre de usuario**: Direción de correo electronico desde la cual se enviaran los correos. Ej. admin@tudominio.com ó tucorreo@gmail.com
+
+         - **Contraseña**: Aquí debes colocar una contraseña de aplicación, para el caso de Gmail, debes ir a tu cuenta de Google (con el mismo correo que utilizaste en el campo **Nombre de usuario**), activar la verificación de dos pasos (2FA), ir a la opción **Contraseñas de aplicación** y crear una contraseña para tu Jenkins.
+           - <img width="874" height="764" alt="image" src="https://github.com/user-attachments/assets/0801f427-d8c8-49bb-a001-94ff2c950d24" />
+           - <img width="874" height="764" alt="image" src="https://github.com/user-attachments/assets/71334ffc-fda5-43ed-b7cc-789a550ceda8" />
+             Esta contraseña será la que utilizará en el campo **Contraseña**
+
+       - Marca la opción **Usar seguridad TLS (STARTTLS)**
+
+       - Puerto de SMTP: `587` (recomendado para Gmail)
+
+**Ejemplo:**
+
+<img width="874" height="764" alt="image" src="https://github.com/user-attachments/assets/d01f921c-8914-4de9-bb9c-b522d4ed6c66" />
