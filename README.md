@@ -142,14 +142,26 @@ Son extenciones que se instalan a Jenkins para agregar nuevas funcionalidades.
 Permiten ingresar valores al momento de ejecutar un build. Es util, por ejemplo, para seleccionar una rama especifica de Git o definir valores antes de una ejecución.s
 
 Para ingresar parametros
-1. Te dirijes a las configuraciones de un Job 
-<img width="372" height="634" alt="image" src="https://github.com/user-attachments/assets/39291555-bad3-42d8-bf64-c2ff23ef3a09" />
+
+1. Te dirijes a las configuraciones de un Job
+   <img width="372" height="634" alt="image" src="https://github.com/user-attachments/assets/39291555-bad3-42d8-bf64-c2ff23ef3a09" />
 
 ---
+
 2. Marca la casilla **Esta ejecución debe parametrizarse**
-<img width="1264" height="676" alt="image" src="https://github.com/user-attachments/assets/6663c521-9557-4677-92fe-f67b24f40cb0" />
+   <img width="1264" height="676" alt="image" src="https://github.com/user-attachments/assets/6663c521-9557-4677-92fe-f67b24f40cb0" />
 
 ---
 
 3. Forma de utilizarlo:
-<img width="719" height="249" alt="image" src="https://github.com/user-attachments/assets/3daf2e66-2312-4123-a997-2c684ced4e58" />
+   <img width="719" height="249" alt="image" src="https://github.com/user-attachments/assets/3daf2e66-2312-4123-a997-2c684ced4e58" />
+
+## Valiables de entorno
+Permiten reutilizar valores dentro de un Job. Jenkins tiene variable de entorno ya establecidas por defecto, tambien permite crear variables de entorno necesarias para el proyecto.
+
+Algunas de las variable de entorno que Jenkins tiene preestablecidad son las siguientes:
+
+- **BUILD_NUMBER**: Número del build actual.
+- **JOB_NAME**: Nombre del Job que se está ejecutando.
+- **WORKSPACE**: Directorio donde jenkins almacena los archivos del Job.
+- **GIT_COMMIT**: Hash del commit (solo si el Job está utilizando Git).
