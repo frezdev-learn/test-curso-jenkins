@@ -154,6 +154,7 @@ Para ingresar parametros
 ---
 
 3. Forma de utilizarlo:
+   
    <img width="719" height="249" alt="image" src="https://github.com/user-attachments/assets/3daf2e66-2312-4123-a997-2c684ced4e58" />
 
 ## Valiables de entorno
@@ -165,3 +166,7 @@ Algunas de las variable de entorno que Jenkins tiene preestablecidad son las sig
 - **JOB_NAME**: Nombre del Job que se está ejecutando.
 - **WORKSPACE**: Directorio donde jenkins almacena los archivos del Job.
 - **GIT_COMMIT**: Hash del commit (solo si el Job está utilizando Git).
+
+**Forma de utilizar:**
+
+  <img width="724" height="393" alt="image" src="https://github.com/user-attachments/assets/8dd7975a-d6d3-4d52-a315-6de3974eea32" />
