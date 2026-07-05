@@ -13,5 +13,11 @@ pipeline {
                 sh 'python3 ./src/saludo.py'
             }
         }
+
+        stage('Build') {
+            steps {
+                sh 'python3 ./src/develop.py'
+            }
+        }
     }
 }
