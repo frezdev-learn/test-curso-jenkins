@@ -14,7 +14,7 @@ pipeline {
             }
         }
 
-        stage('Build') {
+        stage('Develop') {
             steps {
                 sh 'python3 ./src/develop.py'
             }
