@@ -1,26 +1,21 @@
 #!/bin/bash
 
-echo "activando entorno virtual"
 cd ./pytest-project
+echo "Activando entorno virtual"
 
 pwd
-if [ ! -d .venv ]; then
+if [ ! -d .venv]; then
     echo "Creando entorno virtual"
     python3 -m venv .venv
 fi
 pwd
-ls -a
-echo "Directorio actual: $(pwd)"
-echo "Listando archivos en el directorio actual:"
-ls -a
-echo "Listando archivos en el directorio .venv:"
-ls -a .venv/bin
 
-if [ -f .venv/bin/activate ]; then
-    . .venv/bin/activate
+if [ ! -f .venv/bin/activate ]; then
+    echo "No se encontró el archivo de activación del entorno virtual."
+    apt install python3.13-venv
+    python3 -m venv .venv
 else
-    echo "No se pudo activar el entorno virtual. Asegúrate de que Python esté instalado y configurado correctamente."
-    exit 1
+    . .venv/bin/activate
 fi
 
 echo "Instalando dependencias"
