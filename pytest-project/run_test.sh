@@ -1,6 +1,7 @@
 #!/bin/bash
 
 echo "activando entorno virtual"
+cd ./pytest-project
 
 if [ ! -d .venv ]; then
     echo "Creando entorno virtual"
