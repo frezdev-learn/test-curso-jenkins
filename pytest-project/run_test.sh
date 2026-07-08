@@ -4,16 +4,14 @@ cd ./pytest-project
 echo "Activando entorno virtual"
 
 pwd
-if [ ! -d .venv]; then
+if [ ! -d .venv ]; then
     echo "Creando entorno virtual"
     python3 -m venv .venv
 fi
 pwd
-
 if [ ! -f .venv/bin/activate ]; then
     echo "No se encontró el archivo de activación del entorno virtual."
-    apt install python3.13-venv
-    python3 -m venv .venv
+    exit 1
 else
     . .venv/bin/activate
 fi
