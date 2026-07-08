@@ -10,8 +10,14 @@ if [ ! -d .venv ]; then
 fi
 pwd
 ls -a
+echo "Directorio actual: $(pwd)"
+echo "Listando archivos en el directorio actual:"
+ls -a
+echo "Listando archivos en el directorio .venv:"
+ls -a .venv/bin
+
 if [ -f .venv/bin/activate ]; then
-    source .venv/bin/activate
+    . .venv/bin/activate
 else
     echo "No se pudo activar el entorno virtual. Asegúrate de que Python esté instalado y configurado correctamente."
     exit 1
