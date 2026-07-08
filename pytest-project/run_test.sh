@@ -8,7 +8,7 @@ if [ ! -d .venv ]; then
     echo "Creando entorno virtual"
     python3 -m venv .venv
 fi
-
+pwd
 if [ -f .venv/bin/activate ]; then
     source .venv/bin/activate
 else
