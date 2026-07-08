@@ -9,6 +9,7 @@ if [ ! -d .venv ]; then
     python3 -m venv .venv
 fi
 pwd
+ls -a
 if [ -f .venv/bin/activate ]; then
     source .venv/bin/activate
 else
