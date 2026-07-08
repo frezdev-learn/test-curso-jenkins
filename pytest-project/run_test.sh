@@ -11,6 +11,7 @@ fi
 pwd
 if [ ! -f .venv/bin/activate ]; then
     echo "No se encontró el archivo de activación del entorno virtual."
+    rm -rf .venv
     exit 1
 else
     . .venv/bin/activate
