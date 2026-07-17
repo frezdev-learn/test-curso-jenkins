@@ -130,9 +130,7 @@ Son extenciones que se instalan a Jenkins para agregar nuevas funcionalidades.
 ### Pluguins mas requeridos:
 
 - [Git Plugin](https://plugins.jenkins.io/git/): Ofrece operaciones básicas de Git para los proyectos de Jenkins. Permite consultar, descargar, realizar un checkout, crear ramas, listar, fusionar, etiquetar y enviar repositorios.
-
 - [Maven Integration](https://plugins.jenkins.io/maven-plugin/): Sirve para integrar de forma nativa proyectos Maven con Jenkins, facilitando la compilación, pruebas y publicación de artefactos. Fue muy importante en los proyectos Freestyle clásicos, aunque hoy en día su uso ha disminuido debido al auge de los Pipelines.
-
 - [Email Extension Plugin](https://plugins.jenkins.io/email-ext): Se utiliza para enviar notificaciones por correo electrónico mucho más personalizadas y potentes que las que ofrece el plugin básico de correo de Jenkins.
 
 ---
@@ -170,7 +168,7 @@ Algunas de las variable de entorno que Jenkins tiene preestablecidad son las sig
 
 **Forma de utilizar:**
 
-  <img width="724" height="393" alt="image" src="https://github.com/user-attachments/assets/8dd7975a-d6d3-4d52-a315-6de3974eea32" />
+<img width="724" height="393" alt="image" src="https://github.com/user-attachments/assets/8dd7975a-d6d3-4d52-a315-6de3974eea32" />
 
 ## Ejecutar un programa en python desde Jenkins
 
@@ -216,16 +214,47 @@ apt-get install python3 python3.pip
      - Aquí llenaremos los siguiente campos
        - Marca la opción **Use SMTP Authentication** (si no está marcada aún)
          - **Nombre de usuario**: Direción de correo electronico desde la cual se enviaran los correos. Ej. admin@tudominio.com ó tucorreo@gmail.com
-
          - **Contraseña**: Aquí debes colocar una contraseña de aplicación, para el caso de Gmail, debes ir a tu cuenta de Google (con el mismo correo que utilizaste en el campo **Nombre de usuario**), activar la verificación de dos pasos (2FA), ir a la opción **Contraseñas de aplicación** y crear una contraseña para tu Jenkins.
            - <img width="874" height="764" alt="image" src="https://github.com/user-attachments/assets/0801f427-d8c8-49bb-a001-94ff2c950d24" />
            - <img width="874" height="764" alt="image" src="https://github.com/user-attachments/assets/71334ffc-fda5-43ed-b7cc-789a550ceda8" />
              Esta contraseña será la que utilizará en el campo **Contraseña**
 
        - Marca la opción **Usar seguridad TLS (STARTTLS)**
-
        - Puerto de SMTP: `587` (recomendado para Gmail)
 
 **Ejemplo:**
 
 <img width="874" height="764" alt="image" src="https://github.com/user-attachments/assets/d01f921c-8914-4de9-bb9c-b522d4ed6c66" />
+
+## Pipilenes
+
+Es un conjunto de complementos que permiten implementar y automatizar procesos de CI/CD.
+Esto se puede hacer en Jenkins mediante código. Un Pipeline en Jenkins representa un conjunto de etapas que son estructuradas y definen como se va a construir, desplegar y probar una aplicación.
+
+### ¿Por que usar Pipelines?
+
+- Automatización completa desde la compilación hasta el despliegue.
+- Facilidad de mantenimiento. Se define como código en un archivo `Jenkinsfile`.
+- Escalable. Permite ejecutarse con multiples agentes o nodos.
+- Permite integración con herramientas CI/CD ya que soporta Git, Docker, Kubernetes, etc.
+- Visibilidad y trazabilidad.
+
+### Tipos de Pipelines
+
+|                      | **Declarativo**                                                | **Scripted**                                                           |
+| -------------------- | -------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| **Sintaxis**         | Sintaxis mas sencilla                                          | Sintaxis basada en Groovy puro                                         |
+| **Facilidad de uso** | Mas facil de usar para principiantes, pero no es tan flexible. | Mas flexible y mas potente pero con ruta te aprendizaje mas extensa    |
+| **Definición**       | `pipeline {}`                                                  | `node {}`                                                              |
+| **Enfoque**          | Es mejor para configuraciones estandar y seguras               | Para configuración avanzada ya que permite usar configuración compleja |
+
+### `Jenkinsfile`
+
+Es un archivo de configuración. Permite definir todos los pasos que va a seguir un Pipeline en Jenkins. Este archivo describe como se contruye, testea y despliega una aplicación de manera automatica de principio a fin.
+
+**Caracteristicas**:
+
+- Se escribe en Groovy (DSL de Jenkins)
+- Define la secuencia de pasos que debe seguir Jenkins
+- Puede estar almacenado en el reposositorio del proyecto
+- Puede ser `Declarativo` o `Scripted`

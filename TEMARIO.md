@@ -69,3 +69,16 @@
 - ¿Qué es un Pipeline y por qué usarlo?
 - Diferencia entre Pipeline Declarativo t Scripted.
 - Creación de un archivo `Jenkinsfile`.
+- Ejemplo básico: Compilar y probar un proyecto Java con Maven.
+
+### 11. **Gestión de Dependencias y Builds**
+
+- Configuración de Maven y Gradle en Jenkins.
+- Construcción de proyectos en diferentes lenguajes (Java, Node.js, Python).
+- Publicación de artefactos (ejemplo: subir a un repositorio como Nexus o Artifactory).
+
+### 12. **Seguridad Básica**
+
+- Configuración de usuarios y roles.
+- Autenticación y autorización.
+- Protección de Jenkins contra accesos no autorizados.
