@@ -5,7 +5,7 @@
 - **Instalar Jenkins con Docker:**
 
 ```bash
-docker run -d --name jenkins -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts
+docker run -d --name jenkins -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock jenkins/jenkins:lts
 ```
 
 **Explicación:**
@@ -15,6 +15,7 @@ docker run -d --name jenkins
 -p 8080:8080 # Exponer puerto de Jenkins
 -p 50000:50000 # Exponer puerto para los agentes
 -v jenkins_home:/var/jenkins_home # Crear volumen
+-v /var/run/docker.sock:/var/run/docker.sock # Crear volumen para utilizar docker dentro del contenedor
 ```
 
 - **Instalar Jenkins con Docker Compose:**

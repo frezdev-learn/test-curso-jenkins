@@ -12,6 +12,12 @@ services:
     volumes:
       - jenkins_home:/var/jenkins_home
 
+      # Este volumen permite uilizar Docker dentro del contenedor de Jenkins,
+      # lo que es útil para ejecutar comandos de Docker desde Jenkins.
+      # Asegúrate de que la ruta del socket de Docker sea correcta según tu sistema operativo y configuración.
+      - /home/frezdev/.docker/desktop/docker.sock:/var/run/docker.sock # Este es para docker desktop en Linux
+      # - /var/run/docker.sock:/var/run/docker.sock # Este es para el docker engine en Linux
+
     environment:
       - JAVA_OPTS=-Djenkins.install.runSetupWizard=true
 
